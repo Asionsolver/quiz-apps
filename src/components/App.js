@@ -1,5 +1,12 @@
+import '../styles/Global.css'
+import Layout from './Layout';
+import Home from './pages/Home';
+
+
 function App() {
-  return <div>App Components</div>;
+  return <Layout>
+    <Home/>
+  </Layout>
 }
 
 export default App;
