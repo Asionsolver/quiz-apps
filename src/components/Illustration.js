@@ -1,12 +1,12 @@
 import React from 'react';
-import SignupImage from '../assets/img/signup.svg'
 
-import IllustrationStyle from '../styles/Illustration.module.css'
 
-export default function Illustration() {
+import IllustrationStyle from '../styles/Illustration.module.css';
+
+export default function Illustration({alt,...rest}) {
   return (
     <div className={IllustrationStyle.illustration}>
-      <img src={SignupImage} alt="Signup" />
+      <img {...rest} alt={ alt}/>
     </div>
   );
 }

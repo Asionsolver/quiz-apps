@@ -1,4 +1,6 @@
 import React from "react";
+import SignupImage from '../../assets/img/signup.svg';
+
 import SignupStyle from "../../styles/Signup.module.css";
 import Button from "../Button";
 import CheckBox from "../CheckBox";
@@ -10,9 +12,9 @@ export default function Signup() {
   return (
     <>
       <h1>Create an account</h1>
-      <div className="colum">
-        <Illustration />
-        <Form className={`${SignupStyle.signup} form`}>
+      <div className="column">
+        <Illustration src={SignupImage} alt="Signup" />
+        <Form className={`${SignupStyle.signup} `}>
           <TextInput type="text" placeholder="Enter name" icon="person" />
           <TextInput
             type="password"
@@ -26,8 +28,10 @@ export default function Signup() {
             icon="lock_clock"
             text="I agree to the Terms &amp; Conditions"
           />
-          <CheckBox text='I agree to the Terms & Conditions'/>
-          <Button>Submit now</Button>
+          <CheckBox text="I agree to the Terms & Conditions" />
+          <Button>
+            <span>Submit now</span>
+          </Button>
           <div className="info">
             Already have an account? <a href="login.html">Login</a> instead.
           </div>
